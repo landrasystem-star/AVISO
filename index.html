@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Facebook</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1877f2, #0e5ec7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background: white;
+            border: none;
+            padding: 25px 60px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #1877f2;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: inherit;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        p {
+            color: white;
+            margin-top: 30px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="boton">
+            📨 ENVIAR AVISO
+        </button>
+        <p>Presiona el botón y se enviará el mensaje a Facebook</p>
+    </div>
+
+    <script>
+        // 🔴 SOLO TIENES QUE CAMBIAR ESTA LÍNEA 🔴
+        // Pon AQUÍ tu enlace de CallMeBot (el que ya tienes y funciona)
+        
+        const miEnlace = "https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.callmebot.com%2Ffacebook%2Fsend.php%3Fapikey%3D2saMJIk12vXwDZd9%26text%3Drevisa%2520el%2520block%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEwZk1KcTZSUEx2ejhIQUVWZnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6G0pu2ujOV-4wIHNdrrNTHEfV7zBrLzSOvpxngDodLQHtFYAPTOM1U_48hdw_aem_x3HK3enYkn_VAk9H601CPg&h=AUA820xZP5EVOAvGxTv1KwbjM8p4G2vagc56IaIyhluQX3LB3ULcTsEpSqRL255AHEzQlRZw0PSOCcmorqiGEYLKJv_yg1saPP9Yn3kGimgxO5YWakbnyM-5a0A";
+        
+        // 🔴 NADA MÁS QUE CAMBIAR ARRIBA 🔴
+        
+        const boton = document.getElementById('boton');
+        
+        boton.addEventListener('click', function() {
+            window.open(miEnlace, '_blank');
+        });
+    </script>
+</body>
+</html>
